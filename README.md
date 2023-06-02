@@ -15,16 +15,20 @@ undefined
 Runs on Node.js
 
 ## Usage
-used to quickly create a readme for projects.
+Used to create a readme file
 
  
 ## License
 
 ## Contributing
-Anyone can contribute.
+Anyone can contribute
 
 ## Test
-testing
+Tested
 
 ## Questions
 
+For additional questions contact me at:
+kimberlyc1904@gmail.com
+https://github.com/Kimberlyc1904/README_Generator
+https://www.youtube.com/watch?v=XI4W9lPAQnQ
