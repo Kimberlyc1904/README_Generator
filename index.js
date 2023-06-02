@@ -2,6 +2,8 @@
 const inquire = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown')
+const renderLicenseBadge = require('./utils/generateMarkdown')
+const renderLicenseSection = require('./utils/generateMarkdown')
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -12,7 +14,7 @@ const questions = [
 },
 {
     type: 'input',
-    message: 'Provide a short description explaining the what, why and how of your project',
+    message: 'Description',
     name: 'description,'
 },
 {
@@ -22,34 +24,43 @@ const questions = [
 },
 {
     type: 'input',
-    message: 'What are the steps required to install your project?',
+    message: 'Installation',
     name: 'installation',
 },
 {
     type: 'input',
-    message: 'Provide instructions and examples for use',
+    message: 'Usage',
     name: 'usage',
 },
 {
-    type: 'input',
-    message: 'Enter License Information',
+    type: 'list',
+    message: 'Select License',
     name: 'license',
+    choices:["MIT", "Apache 2.0", "GPL 3.0", "None"]
 },
 {
     type: 'input',
-    message: 'Enter test examples',
+    message: 'Test',
     name: 'test',
 },
-
+{
+    type: 'input',
+    message: 'Contributing',
+    name: 'contributing',
+},
 ];
 
 
 // TODO: Create a function to write README file
 function writeToFile(data) {
   
-        //console.log(generateMarkdown(data))
-        const newData = generateMarkdown(data)
-        fs.writeFileSync('README.txt', JSON.stringify(data));
+     if (data.license === 'NONE') {
+        data.license = renderLicenseSection(data.license);
+        const license = ""
+     }
+        const license = "## License"
+        const newData = generateMarkdown(data, license)
+        fs.writeFileSync('README.md', newData);
         console.log('README file Generated!');
     };
 
