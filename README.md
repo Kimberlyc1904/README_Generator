@@ -1,4 +1,4 @@
-# readme generator
+# Readme Generator
 
 ## Description
 undefined
@@ -12,19 +12,19 @@ undefined
 
 
 ## Installation
-runs on node.js
+Runs on Node.js
 
 ## Usage
-used to create readme files
+used to quickly create a readme for projects.
 
  
 ## License
 
 ## Contributing
-anyone can contribute
+Anyone can contribute.
 
 ## Test
-tested
+testing
 
 ## Questions
 
