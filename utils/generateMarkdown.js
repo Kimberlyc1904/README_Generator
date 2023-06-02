@@ -48,10 +48,12 @@ ${data.test}
 
 ## Questions
 
+```
 For additional questions contact me at:
 kimberlyc1904@gmail.com
 https://github.com/Kimberlyc1904/README_Generator
 https://www.youtube.com/watch?v=XI4W9lPAQnQ
+```
 `;
 }
 
